@@ -20,13 +20,13 @@
 
                      var x=event.latLng.lng();
                 var offset=parseInt(x)/15;
-            var remain=(x)%15;
-            remain=(remain*4)/60;
-            offset=offset+remain;
+//             var remain=(x)%15;
+//             remain=(remain*4)/60;
+//             offset=offset+remain;
             if(x<0)
-             offset=offset-1; 
+             offset=offset+1.40; 
                else if(x>0)
-             offset=offset+1;
+             offset=offset+0.60;
 
             var a = calcTime(offset);
     document.getElementById("p1").innerHTML = a;
@@ -56,7 +56,7 @@
         </script>
     </head>
     <body>
-        <div id="map_canvas" onclick="mapDivClicked(event);" style="height: 500px; width: 100%;"></div>
+        <div id="map_canvas" onclick="mapDivClicked(event);" style="height: 600px; width: 100%;"></div>
        <!-- <div>
         x: <input id="posX" />
         y: <input id="posY" />
